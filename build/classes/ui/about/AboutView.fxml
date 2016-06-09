@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="285.0" prefWidth="325.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.about.AboutViewController">
+    <stylesheets>
+        <URL value="@aboutview.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="81.0" layoutY="202.0" text="Instant Messenger Plus 1.0" />
+      <Label layoutX="49.0" layoutY="238.0" text="Developed by: Dulanjaya Tennekoon" />
+      <Pane id="image" layoutX="40.0" layoutY="27.0" prefHeight="163.0" prefWidth="259.0" stylesheets="@aboutview.css" />
+   </children>
+</AnchorPane>

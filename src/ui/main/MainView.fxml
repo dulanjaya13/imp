@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="714.0" prefWidth="942.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.MainViewController">
+    <stylesheets>
+        <URL value="@mainview.css" />
+    </stylesheets>
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="1023.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="IMP">
+            <items>
+                  <Menu mnemonicParsing="false" text="My Account">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleEditMyAccountMenuCall" text="Edit My Account" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleLogOutMenuCall" text="Log Out" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#handleExitMenuCall" text="Exit" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Conversation">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleNewConvesationMenuCall" text="New Conversation" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Contacts">
+              <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleContactMenuCall" text="Add / Remove Contacts" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <CheckMenuItem fx:id="history" mnemonicParsing="false" text="History Record Feature" />
+                  <CheckMenuItem fx:id="isnotifiable" mnemonicParsing="false" text="Display Notifications" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAboutMenuCall" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane id="SidePane" layoutY="32.0" prefHeight="682.0" prefWidth="341.0" stylesheets="@mainview.css">
+         <children>
+            <Pane prefHeight="138.0" prefWidth="341.0">
+               <children>
+                  <ImageView fx:id="myAvatar" fitHeight="120.0" fitWidth="100.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true">
+                      <image>
+                        <Image url="/resources/defaultAvatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="name" layoutX="129.0" layoutY="30.0" prefHeight="21.0" prefWidth="188.0" text="Name" />
+                  <Label fx:id="presence" layoutX="129.0" layoutY="59.0" text="Presence" textFill="#b9acac" />
+               </children>
+            </Pane>
+            <TabPane layoutX="-1.0" layoutY="144.0" prefHeight="538.0" prefWidth="341.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="CONTACTS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="contacts" prefHeight="501.0" prefWidth="341.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="CONVERSATIONS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="conversations" layoutY="-1.0" prefHeight="499.0" prefWidth="341.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+      <Pane layoutX="341.0" layoutY="32.0" prefHeight="682.0" prefWidth="682.0">
+         <children>
+            <Pane prefHeight="145.0" prefWidth="682.0" style="-fx-background-color: #80CBC4;">
+               <children>
+                  <ImageView fx:id="chatterAvatar" fitHeight="120.0" fitWidth="100.0" layoutX="7.0" layoutY="13.0" pickOnBounds="true" />
+                  <Label fx:id="chatterName" layoutX="142.0" layoutY="14.0" prefHeight="50.0" prefWidth="463.0">
+                     <font>
+                        <Font size="34.0" />
+                     </font></Label>
+                  <Label fx:id="chatterPresence" layoutX="142.0" layoutY="62.0" prefHeight="21.0" prefWidth="147.0" />
+                  <ToolBar fx:id="extraComButtons" layoutX="429.0" layoutY="73.0" prefHeight="66.0" prefWidth="239.0" style="-fx-background-color: #80CBC4;">
+                    <items>
+                      <Button id="file" mnemonicParsing="false" onAction="#handleFileSendButtonAction" prefHeight="53.0" prefWidth="51.0" stylesheets="@mainview.css" />
+                        <Button id="imagesend" mnemonicParsing="false" onAction="#handleSendImageButtonAction" prefHeight="53.0" prefWidth="51.0" stylesheets="@mainview.css" />
+                        <Button id="call" mnemonicParsing="false" onAction="#handleCallButtonAction" prefHeight="53.0" prefWidth="51.0" stylesheets="@mainview.css" />
+                        <Button id="clear" mnemonicParsing="false" onAction="#handleClearHistoryButtonCall" prefHeight="53.0" prefWidth="51.0" stylesheets="@mainview.css" />
+                    </items>
+                  </ToolBar>
+                  <Button id="request" fx:id="friendRequest" layoutX="635.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleFriendRequestButtonAction" prefHeight="31.0" prefWidth="33.0" stylesheets="@mainview.css" />
+               </children>
+            </Pane>
+            <TextField id="sendbox" fx:id="message" layoutY="602.0" onAction="#handleSendButtonAction" prefHeight="78.0" prefWidth="597.0" promptText="Type a message here" stylesheets="@mainview.css" />
+            <Button id="send" layoutX="597.0" layoutY="602.0" mnemonicParsing="false" onAction="#handleSendButtonAction" prefHeight="78.0" prefWidth="84.0" stylesheets="@mainview.css" />
+            <ScrollPane id="scrollable" fx:id="scrollPane" layoutX="-1.0" layoutY="142.0" prefHeight="460.0" prefWidth="682.0" stylesheets="@mainview.css">
+               <content>
+                  <VBox id="chatback" fx:id="chatList" prefHeight="457.0" prefWidth="669.0" stylesheets="@mainview.css" />
+               </content>
+            </ScrollPane>
+         </children></Pane>
+   </children>
+</AnchorPane>

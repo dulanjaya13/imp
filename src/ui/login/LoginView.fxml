@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="416.0" prefWidth="673.0" stylesheets="@loginview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.login.LoginViewController">
+   <children>
+      <StackPane id="pane" layoutX="129.0" layoutY="8.0" prefHeight="392.0" prefWidth="415.0" stylesheets="@loginview.css" />
+      <Label layoutX="189.0" layoutY="205.0" text="Username" />
+      <Label layoutX="189.0" layoutY="275.0" text="Password" />
+      <TextField id="username" fx:id="userName" layoutX="188.0" layoutY="227.0" prefHeight="31.0" prefWidth="297.0" stylesheets="@loginview.css" />
+      <PasswordField id="password" fx:id="password" layoutX="188.0" layoutY="296.0" onAction="#handleLoginButtonAction" prefHeight="31.0" prefWidth="297.0" stylesheets="@loginview.css" />
+      <Button id="loginBtn" layoutX="372.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="29.0" prefWidth="113.0" stylesheets="@loginview.css" text="Login" />
+      <Hyperlink layoutX="14.0" layoutY="380.0" onAction="#handleRegisterAction" prefHeight="29.0" prefWidth="67.0" text="Register" />
+      <Label id="logo" layoutX="181.0" layoutY="13.0" prefHeight="184.0" prefWidth="312.0" stylesheets="@loginview.css" />
+      <CheckBox id="check" fx:id="rememberMe" contentDisplay="RIGHT" layoutX="189.0" layoutY="357.0" mnemonicParsing="false" selected="true" stylesheets="@loginview.css" text="Remember Me" />
+   </children>
+</AnchorPane>

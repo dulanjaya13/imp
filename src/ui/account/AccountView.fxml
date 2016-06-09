@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.account.AccountViewController">
+    <stylesheets>
+        <URL value="@accountview.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="fname" layoutX="267.0" layoutY="178.0" prefHeight="31.0" prefWidth="231.0" />
+      <TextField fx:id="lname" layoutX="267.0" layoutY="223.0" prefHeight="31.0" prefWidth="231.0" />
+      <Label layoutX="102.0" layoutY="183.0" text="First Name" />
+      <Label layoutX="102.0" layoutY="228.0" text="Last Name" />
+      <Label layoutX="102.0" layoutY="272.0" text="EMail Address" />
+      <TextField fx:id="email" layoutX="267.0" layoutY="267.0" prefHeight="31.0" prefWidth="231.0" />
+      <TextField fx:id="tele" layoutX="267.0" layoutY="312.0" prefHeight="31.0" prefWidth="231.0" />
+      <Label layoutX="102.0" layoutY="317.0" text="Telephone" />
+      <Button layoutX="447.0" layoutY="358.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Pane layoutX="225.0" layoutY="14.0" prefHeight="159.0" prefWidth="151.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fx:id="pfpic" fitHeight="140.0" fitWidth="123.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#changeProfilePicture" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

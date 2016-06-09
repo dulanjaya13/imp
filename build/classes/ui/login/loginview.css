@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 8, 2016, 5:25:40 PM
+    Author     : Dulanjaya
+*/
+
+#AnchorPane{
+    -fx-background-image: url(../../resources/loginScreen.jpg);
+    -fx-background-size: 100%;
+    -fx-background-color: #4DB6AC;
+    -fx-opacity: 10;
+}
+
+#logo {
+    -fx-background-image: url(../../resources/Logoname.png);
+    -fx-background-size: 90%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#username {
+    -fx-background-color: transparent;
+    -fx-border-color: #4a1561;
+    -fx-text-fill: white;
+}
+
+#password {
+    -fx-background-color: transparent;
+    -fx-border-color: #4a1561;
+    -fx-text-fill: white;
+}
+
+#loginBtn {
+    -fx-text-fill: #e4f3fc;
+    -fx-font: 12pt "Tahoma Bold";
+    -fx-padding: 6;
+    -fx-base: #618A22
+}
+ 
+#loginBtn:hover{
+    -fx-base: #0099cc;
+}
+
+#check {
+    -fx-text-fill: white;
+}
+
+#pane {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-insets: 2;
+}

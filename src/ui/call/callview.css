@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #B2DFDB;
+}
+
+#call {
+    -fx-background-image: url(../../resources/phoneDial.png);
+    -fx-background-size: 90%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#callimage {
+    -fx-background-image: url(../../resources/phoneImage.png);
+    -fx-background-size: 90%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

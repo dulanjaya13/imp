@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="203.0" prefWidth="427.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.register.RegisterViewController">
+    <stylesheets>
+        <URL value="@registerview.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="username" layoutX="168.0" layoutY="21.0" prefHeight="31.0" prefWidth="230.0" />
+      <PasswordField fx:id="password" layoutX="168.0" layoutY="64.0" prefHeight="31.0" prefWidth="230.0" />
+      <PasswordField fx:id="confirmPassword" layoutX="168.0" layoutY="106.0" prefHeight="31.0" prefWidth="230.0" />
+      <Button layoutX="324.0" layoutY="148.0" mnemonicParsing="false" onAction="#handleRegisterButtonAction" text="Register" />
+      <Label layoutX="30.0" layoutY="26.0" text="Username" />
+      <Label layoutX="32.0" layoutY="69.0" text="Password" />
+      <Label layoutX="32.0" layoutY="111.0" text="Confirm Password" />
+   </children>
+</AnchorPane>

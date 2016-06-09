@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="342.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.call.CallViewController">
+    <stylesheets>
+        <URL value="@callview.css" />
+    </stylesheets>
+   <children>
+      <Button id="call" layoutX="123.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleCallButtonAction" prefHeight="88.0" prefWidth="96.0" stylesheets="@callview.css" />
+      <Label id="callimage" layoutX="88.0" layoutY="51.0" prefHeight="153.0" prefWidth="166.0" stylesheets="@callview.css" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="567.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.contacts.ContactsViewController">
+    <stylesheets>
+        <URL value="@contactsview.css" />
+    </stylesheets>
+   <children>
+      <TabPane prefHeight="479.0" prefWidth="569.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Your Contacts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="contacts" layoutX="14.0" layoutY="14.0" prefHeight="420.0" prefWidth="364.0" />
+                        <Button layoutX="414.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleRemoveButtonAction" prefHeight="47.0" prefWidth="127.0" text="Unfriend" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Search and Add Contacts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="567.0">
+                     <children>
+                        <TextField fx:id="searchField" layoutX="14.0" layoutY="37.0" prefHeight="35.0" prefWidth="365.0" />
+                        <Button layoutX="425.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleSearchButtonAction" prefHeight="36.0" prefWidth="112.0" text="Search" />
+                        <ListView fx:id="findings" layoutX="13.0" layoutY="87.0" prefHeight="345.0" prefWidth="365.0" />
+                        <Button layoutX="425.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="37.0" prefWidth="112.0" text="Send Request" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="353.0" prefWidth="415.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.conversation.ConversationViewController">
+    <stylesheets>
+        <URL value="@conversationview.css" />
+    </stylesheets>
+   <children>
+      <TabPane prefHeight="359.0" prefWidth="415.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Create Conversation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="415.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="78.0" text="Name" />
+                        <TextField id="c_name" fx:id="cname" layoutX="25.0" layoutY="105.0" prefHeight="31.0" prefWidth="366.0" promptText="Conversation Name" />
+                        <Button layoutX="328.0" layoutY="247.0" mnemonicParsing="false" onAction="#handleCreateButtonAction" text="Create" />
+                        <PasswordField fx:id="password" layoutX="25.0" layoutY="189.0" prefHeight="31.0" prefWidth="366.0" promptText="Password" />
+                        <CheckBox fx:id="isclosed" layoutX="25.0" layoutY="153.0" mnemonicParsing="false" text="Closed Conversation" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
